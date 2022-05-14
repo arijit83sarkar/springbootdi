@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class AstonMartin implements ICar {
 
-    private EngineServiceImpl engine;
+    private IEngineService engine;
 
     @Autowired
     public AstonMartin(EngineServiceImpl engine) {
