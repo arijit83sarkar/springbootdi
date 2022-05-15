@@ -8,8 +8,13 @@ public class AstonMartin implements ICar {
 
     private IEngineService engine;
 
+    // @Autowired
+    // public AstonMartin(IEngineService engine) {
+    //     this.engine = engine;
+    // }
+
     @Autowired
-    public AstonMartin(EngineServiceImpl engine) {
+    public void setEngineService(IEngineService engine) {
         this.engine = engine;
     }
 
@@ -22,5 +27,4 @@ public class AstonMartin implements ICar {
     public String getEngine() {
         return this.engine.getEngineDetails();
     }
-
 }
